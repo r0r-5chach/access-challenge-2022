@@ -15,7 +15,7 @@ class Routes {
         
         $this->checkLogin($controllerName);
 
-        if (array_key_exists($controllerName, $controllers)) {
+        if (array_key_exists($controllerName, $this->controllers)) {
             if (\method_exists($this->controllers[$controllerName], $functionName)) {
                 return $this->controllers[$controllerName];
             }
@@ -34,7 +34,7 @@ class Routes {
     }
 
     public function checkLogin($name) {
-        $requiresLogin = $this->$loginControllers[$name] ?? false;
+        $requiresLogin = $this->loginControllers[$name] ?? false;
 
         if ($requiresLogin && !isset($_SESSION['loggedin'])) {
             header('location: /user/login');

@@ -1,8 +1,8 @@
 <?php
 namespace site;
-class Routes implements \framework\Routes {
+class Routes extends \framework\Routes {
     public function __construct() {
-        $this->databaseTable = [];
+        $this->databaseTables = [];
         $this->controllers = [];
         //TODO: Add database tables to array
         //TODO: Add controllers to array
