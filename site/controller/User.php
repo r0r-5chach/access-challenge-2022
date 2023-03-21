@@ -34,9 +34,15 @@ class User extends Controller
 
     public function loginSubmit()
     {
-        $template = 'login.html.php';
+        $template = 'patient_login.html.php';
+        $stylesheet = 'patient_login';
         $errors = [];
         $message = '';
+
+        if (isset($_GET['type']) && $_GET['type'] == "admin") {
+            $template = 'worker_login.html.php';
+            $stylesheet = 'worker_login';
+        }
 
         if ($_POST) {
             if (isset($_POST['submit'])) {
@@ -65,9 +71,12 @@ class User extends Controller
                 }
             }
         }
-        return ['template' => $template, 'title' => 'login',
+        return ['template' => $template,
+            'title' => 'Login',
+            'stylesheet' => $stylesheet,
             'vars' => ['errors' => $errors,
-                'message' => $message]];
+                'message' => $message]
+        ];
     }
 
     public function logout()

@@ -13,14 +13,16 @@
               <div class="u-align-center u-container-style u-layout-cell u-size-36 u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
                   <div class="u-form u-login-control u-form-1">
-                    <form action="#" class="u-clearfix u-form-custom-backend u-form-spacing-38 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 30px;">
+
+
+                    <form action="/user/login" method="post" class="u-clearfix u-form-custom-backend u-form-spacing-38 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 30px;">
                       <div class="u-form-group u-form-name">
-                        <label for="username-a30d" class="u-label">Staff ID *</label>
-                        <input type="text" placeholder="Enter your Username" id="username-a30d" name="username" class="u-grey-5 u-input u-input-rectangle u-input-1" required="">
+                        <label for="email" class="u-label">Email</label>
+                        <input type="text" placeholder="Enter your Email" id="email" name="email" class="u-grey-5 u-input u-input-rectangle u-input-1" required="">
                       </div>
                       <div class="u-form-group u-form-password">
-                        <label for="password-a30d" class="u-label">Password *</label>
-                        <input type="text" placeholder="Enter your Password" id="password-a30d" name="password" class="u-grey-5 u-input u-input-rectangle u-input-2" required="">
+                        <label for="password" class="u-label">Password</label>
+                        <input type="password" placeholder="Enter your Password" id="password" name="password" class="u-grey-5 u-input u-input-rectangle u-input-2" required="">
                       </div>
                       <div class="u-align-left u-form-group u-form-submit">
                         <a href="managepatients.html" class="u-border-2 u-border-hover-palette-1-base u-border-white u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-6 u-text-hover-black u-text-white u-btn-4">Login</a>
@@ -28,6 +30,8 @@
                       </div>
                       <input type="hidden" value="" name="recaptchaResponse">
                     </form>
+
+
                   </div>
                   <a href="" class="u-border-active-palette-2-base u-border-hover-palette-1-base u-border-none u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-hover-palette-3-base u-text-palette-1-base u-btn-3">Forgot password?</a>
                   <a href="" class="u-border-active-palette-2-base u-border-hover-palette-1-base u-border-none u-btn u-button-style u-login-control u-login-create-account u-none u-text-hover-palette-3-base u-text-palette-1-base u-btn-4">Don't have an account?</a>
