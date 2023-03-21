@@ -2,7 +2,7 @@
 namespace site;
 class Routes extends \framework\Routes {
     public function __construct() {
-        $this->databaseTable = [];
+        $this->databaseTables = [];
         $this->controllers = [];
         $this->initTables();
         //TODO: Add database tables to array
@@ -10,6 +10,6 @@ class Routes extends \framework\Routes {
         //TODO: add login controllers to array
     }
     public function initTables(){
-        $this->databaseTable['users'] = new \site\DatabaseTable();
+        $this->databaseTables['users'] = new DatabaseTable("users", "user_id");
     }
 }
