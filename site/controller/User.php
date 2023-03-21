@@ -18,19 +18,18 @@ class User extends Controller
     }
 
     public function login(){
-        if (isset($_GET['type']) && trim($_GET['type']) == 'admin') {
-            return [
-            'title' => 'Login',
-            'template' => 'worker_login.html.php',
-            'stylesheet' => 'worker_login'];
+        $template = 'patient_login.html.php';
+        $stylesheet = 'patient_login';
+        if(isset($_GET['type'])) {
+            if ($_GET['type'] == "admin") {
+                $template = 'worker_login.html.php';
+                $stylesheet = 'worker_login';
+            }
         }
-        else {
-            return [
+        return ['template' => $template,
             'title' => 'Login',
-            'vars' => $this->vars,
-            'template' => 'patient_login.html.php',
-            'stylesheet' => 'patient_login'];
-        }
+            'stylesheet' => $stylesheet,
+            'vars' => $this->vars];
     }
 
     public function loginSubmit()
