@@ -57,7 +57,7 @@
       </div></header>
             <?=$content;?>
             <section class="u-backlink u-clearfix u-black-80"></section>
-    <footer class="u-clearfix u-footer u-black u-footer" id="sec-3d9d"><div class="u-clearfix u-sheet u-sheet-1">
+    <footer class="u-clearfix u-footer u-footer" id="sec-3d9d"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-gutter-30 u-layout-wrap u-layout-wrap-1">
           <div class="u-gutter-0 u-layout">
             <div class="u-layout-row">
