@@ -4,8 +4,8 @@ namespace site;
 
 class DatabaseTable extends \framework\DatabaseTable
 {
-    protected $username = 'v.je';
-    protected $password = 'v.je';
+    protected $username = 'root';
+    protected $password = 'secret';
     protected $schema = 'nhs';
     protected $server = 'mysql';
 }
