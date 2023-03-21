@@ -1,6 +1,7 @@
 <?php
 namespace site;
 
+use site\controller\Portal;
 use site\controller\User;
 
 class Routes extends \framework\Routes {
@@ -19,6 +20,7 @@ class Routes extends \framework\Routes {
 
     private function initControllers() {
         $this->controllers['user'] = new User($this->databaseTables['users']);
+        $this->controllers['portal'] = new Portal();
     }
 
     public function getDefaultRoute() {
