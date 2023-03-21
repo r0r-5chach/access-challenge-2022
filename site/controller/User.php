@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace site\controller;
 
 use site\DatabaseTable;
 
