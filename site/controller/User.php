@@ -3,8 +3,9 @@
 namespace site\controller;
 
 use site\DatabaseTable;
+use framework\Controller;
 
-class User
+class User extends Controller
 {
     private $userTable;
 
@@ -12,15 +13,26 @@ class User
 
     public function __construct(DatabaseTable $userTable) {
         $this->userTable = $userTable;
-        $validator = new Validations();
-        $this->validator = $validator;
+        $this->validator = new Validations();
+        $this->vars = [];
     }
 
     public function login(){
-            return ['template' => 'login.html.php',
-                'title' => 'Login',
-                'vars' => []];
+        if (isset($_GET['type']) && trim($_GET['type']) == 'admin') {
+            return [
+            'title' => 'Login',
+            'template' => 'worker_login.html.php',
+            'stylesheet' => 'worker_login'];
+        }
+        else {
+            return [
+            'title' => 'Login',
+            'vars' => $this->vars,
+            'template' => 'patient_login.html.php',
+            'stylesheet' => 'patient_login'];
+        }
     }
+
     public function loginSubmit()
     {
         $template = 'login.html.php';
@@ -41,7 +53,6 @@ class User
                             $user[0]["password"]);
                         if ($chkPassword) {
                             //  valid
-                            $this->session();
                             $_SESSION['loggedin'] = $user[0]['id'];
                             $_SESSION['userDetails'] = $user[0];
 
@@ -62,23 +73,7 @@ class User
 
     public function logout()
     {
-        session_start();
         session_unset();
         session_destroy();
-
-        header('Location: index');
-    }
-
-
-
-
-    /**
-     * @return void
-     */
-    public function session()
-    {
-        if (!isset($_SESSION)) {
-            session_start();
-        }
     }
 }

@@ -44,8 +44,8 @@ class EntryPoint {
             $page = $page->$functionName();
         }
         $content = $this->loadTemplate('../templates/' . $page['template'], $page['vars']);
-        $nav = $this->loadTemplate('../templates/nav.html.php', $page['vars']);
         $title = $page['title'];
+        $stylesheet = $page['stylesheet'];
         require '../templates/layout.html.php';
     }
 }

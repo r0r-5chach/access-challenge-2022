@@ -7,7 +7,7 @@
                 <div class="u-container-layout u-container-layout-1">
                   <h5 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1"> Help Us 24/7</h5>
                   <h3 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2"> For patients and the people</h3>
-                  <a href="patientlogin.html" class="u-border-2 u-border-hover-palette-1-base u-border-white u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-6 u-text-hover-black u-text-white u-btn-1">Patients Login</a>
+                  <a href="/user/login?type=patient" class="u-border-2 u-border-hover-palette-1-base u-border-white u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-6 u-text-hover-black u-text-white u-btn-1">Patients Login</a>
                 </div>
               </div>
               <div class="u-align-center u-container-style u-layout-cell u-size-36 u-layout-cell-2">

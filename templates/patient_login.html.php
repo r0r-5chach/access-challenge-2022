@@ -38,7 +38,7 @@
                     <br>
                     <span style="font-size: 2.25rem;">you</span>
                   </h3>
-                  <a href="Home.html" class="u-border-2 u-border-hover-palette-1-base u-border-white u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-6 u-text-hover-black u-text-white u-btn-4">Staff Login</a>
+                  <a href="/user/login?type=admin" class="u-border-2 u-border-hover-palette-1-base u-border-white u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-6 u-text-hover-black u-text-white u-btn-4">Staff Login</a>
                 </div>
               </div>
             </div>

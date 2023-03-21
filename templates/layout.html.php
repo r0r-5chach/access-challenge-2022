@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
 	<head>
+    <link rel="stylesheet" href="/styles/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/styles/<?=$stylesheet?>.css" media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
@@ -16,9 +18,6 @@
         <meta name="theme-color" content="#478ac9">
         <meta data-intl-tel-input-cdn-path="intlTelInput/">
 		<title> <?=$title;?> </title>
-        <!--TODO: dynamically reference page css based on template-->
-        <link rel="stylesheet" href="styles/nicepage.css" media="screen">
-        <link rel="stylesheet" href="styles/addpost.css" media="screen">
 	</head>
     <body class="u-body u-xl-mode" data-lang="en">
     <header class="u-clearfix u-header u-palette-1-base u-header" id="sec-6037"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
